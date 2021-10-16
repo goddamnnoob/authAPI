@@ -1,5 +1,6 @@
 package domain
 
-type User struct {
+type Login struct {
 	UserId string
+	
 }
