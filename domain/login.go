@@ -1,6 +1,6 @@
 package domain
 
 type Login struct {
-	UserId string
-	
+	UserId strings
+	AccountId strings
 }
