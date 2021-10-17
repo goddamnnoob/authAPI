@@ -1,7 +1,8 @@
 package domain
 
 import (
-	"github.com/goddamnnoob/notReddit/errs"
+	"database/sql"
+
 	"github.com/jmoiron/sqlx"
 )
 
@@ -21,7 +22,11 @@ func (d AuthRepositoryDb) FindBy(username string, password string) (*Login, *err
                 GROUP BY a.customer_id`
 	err := d.client.Get(&login, sqlVerify, username, password)
 	if err != nil {
-		return nil, errs.NewNotFoundError("Failed Authentication")
+		if err == sql.ErrNoRows {
+			return nil, errs.NewAuthenticationError("invalid credentials")
+		} else {
+			return nil, errs.NewUnexpectedError("db error")
+		}
 	}
 	return &login, nil
 }
