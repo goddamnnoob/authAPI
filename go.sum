@@ -1,2 +1,4 @@
+github.com/goddamnnoob/notReddit v0.0.0-20211010052121-9adbe366d838 h1:FJlgAV2PNsbQzyPw6VAoNNGy/TL3cdBsL4M7F5ab4bA=
+github.com/goddamnnoob/notReddit v0.0.0-20211010052121-9adbe366d838/go.mod h1:lsCrDCyVw62cfV3MVh68ZLtn23mRP3BXkbcZ3Rcx+Uc=
 github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
 github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
